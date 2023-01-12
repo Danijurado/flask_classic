@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+
+{%block section%}
+<h1>borrado</h1>
+<article>
+    <p><strong>Fecha:</strong>{{data[1]}}</p>
+    <p><strong>Concepto:</strong>{{data[2]}}</p>
+    <p><strong>Cantidad:</strong>{{data[3]}}</p>
+</article>
+<form action="/delete/{{data[0]}}">
+    <button type="submit" style="background-color:  #e91e63;">Borrar</button>
+</form>
+{%endblock%}
