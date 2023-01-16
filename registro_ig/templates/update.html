@@ -1,8 +1,7 @@
+{%extends 'base.html'%}
 
-{% extends "base.html" %}
-
-{% block section %}
-<form action="/new" method="post">
+{%block section%}
+<form action="/update{{id}}" method="post">
     {{ dataForm.csrf_token }}
     
     {{ dataForm.date.label }}
@@ -39,12 +38,4 @@
 
   
 </form>
-
-<article>
-    <ul>
-       {% for item in msgError %}     
-            <li class="error">{{item}}</li>
-       {% endfor %}     
-    </ul>
-</article>
 {% endblock %}

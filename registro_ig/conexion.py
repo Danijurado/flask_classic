@@ -3,10 +3,8 @@ from config import *
 
 
 class Conexion:
-    pass
-'''''
-    def __init__(self,querySql):
+    def __init__(self,querySql,params=[]):
         self.con = sqlite3.connect(ORIGIN_DATA)
-        self.cur = con.cursor()
-        self.res = cur.execute(querySql)
-'''        
+        self.cur = self.con.cursor()
+        self.res = self.cur.execute(querySql,params)
+    

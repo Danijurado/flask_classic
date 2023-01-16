@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 
 {% block section %}
+<h4>Total Ingresos: {{ingreso}}€</h4>
+<h4>Total Gastos: {{gasto}}€</h4>
+<h4>Saldo Actual: {{ingreso + gasto}}€</h4>
 
 <h1>Lista de movimientos</h1>
+
+{% if data %}
         <table role="grid">
             <thead>
                 <tr>
@@ -38,4 +43,7 @@
                
             </tbody>
         </table>
+{% else %}
+<h3>No existen datos de movimientos...</h3>
+{% endif %}
 {% endblock %}

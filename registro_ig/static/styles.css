@@ -11,3 +11,15 @@ body{
     grid-template-rows: auto 50px 1fr auto;
     margin: 0;
 }
+
+ul.errors{
+    color: red;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+ul.flashes{
+    color: rgb(42, 172, 85);
+    font-weight: bold;
+    font-size: 0.8em;
+}
